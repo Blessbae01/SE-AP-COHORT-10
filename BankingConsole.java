@@ -7,7 +7,7 @@ public class BankingConsole {
     Scanner customerinput = new Scanner(System.in);
     int option=customerinput.nextInt();
     customerinput.nextLine(); 
-    while (option >=1 && option<= 8) {
+    while (option >=1 && option<= 8) {// the code will continue to run until the condition is false
         switch (option){
             case 1:
             System.out.println("ENTER YOUR FULLNAME");
@@ -61,11 +61,11 @@ public class BankingConsole {
                 }
                 default:
                 System.out.println("You entered an invalid number");
-                }
-                // Show menu again after each operation
-                System.out.println("\nWhat Operation Do you want?\n1. Customer Onboarding\n2. Account Opening\n3. Deposit to Account\n4. Withdrawal from Account\n5. Transfer to other Accounts\n6. Account Closing\n7. View all Transactions\n8. Exit");
-                option = customerinput.nextInt();// this will accept input from the user again
             }
-            customerinput.close();
+            System.out.println("WHAT OPERATION DO YOU WANT?\n1. Customer Onboarding\n2. Account Opening\n3. Deposit to Account\n4. Withdrawal from Account\n5. Transfer to other Accounts\n6. Account Closing\n7. View all Transactions\n8. Exit");
+            option= customerinput.nextInt();
+            customerinput.nextLine();
         }
+        customerinput.close();
     }
+}
